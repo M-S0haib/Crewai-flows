@@ -1,0 +1,23 @@
+[project]
+name = "practice_project"
+version = "0.1.0"
+description = "practice_project using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0",
+    "litellm>=1.30.3"
+]
+
+[project.scripts]
+run_flow = "practice_project.practice:kickoff"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = ["src/practice_project"]
+
+[tool.crewai]
+type = "crew"
